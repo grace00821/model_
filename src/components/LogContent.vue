@@ -1,12 +1,34 @@
 <template>
-  <v-container style="background-color: #20c997">
-    <vue-advanced-chat
-      :current-user-id="currentUserId"
-      :rooms="JSON.stringify(rooms)"
-      :messages="JSON.stringify(messages)"
-      :room-actions="JSON.stringify(roomActions)"
-    />
-  </v-container>
+  <v-row style="margin: 15px; justify-content: end"
+    ><v-card elevation="3" shaped @click="getAnswer(1)"
+      ><v-card-title>Message</v-card-title></v-card
+    ></v-row
+  >
+  <v-row v-show="answer1" style="margin: 15px; justify-content: start"
+    ><v-card elevation="3" shaped :loading="loading1"
+      ><v-card-title>......</v-card-title></v-card
+    ></v-row
+  >
+  <v-row style="margin: 15px; justify-content: end"
+    ><v-card elevation="3" shaped @click="getAnswer(2)"
+      ><v-card-title>Message</v-card-title></v-card
+    ></v-row
+  >
+  <v-row v-show="answer2" style="margin: 15px; justify-content: start"
+    ><v-card elevation="3" shaped :loading="loading2"
+      ><v-card-title>......</v-card-title></v-card
+    ></v-row
+  >
+  <v-row style="margin: 15px; justify-content: end"
+    ><v-card elevation="3" shaped @click="getAnswer(3)"
+      ><v-card-title>Message</v-card-title></v-card
+    ></v-row
+  >
+  <v-row v-show="answer3" style="margin: 15px; justify-content: start">
+    <v-card elevation="3" shaped :loading="loading3"
+      ><v-card-title>......</v-card-title></v-card
+    ></v-row
+  >
 </template>
 
 <script>
@@ -15,76 +37,34 @@ register();
 export default {
   data() {
     return {
-      currentUserId: "1234",
-      rooms: [
-        {
-          roomId: "1",
-          roomName: "Room 1",
-          avatar: "assets/imgs/people.png",
-          unreadCount: 4,
-          index: 3,
-          lastMessage: {
-            _id: "xyz",
-            content: "Last message received",
-            senderId: "1234",
-            username: "John Doe",
-            timestamp: "10:20",
-            saved: true,
-            distributed: false,
-            seen: false,
-            new: true,
-          },
-          users: [
-            {
-              _id: "1234",
-              username: "John Doe",
-              avatar: "assets/imgs/doe.png",
-              status: {
-                state: "online",
-                lastChanged: "today, 14:30",
-              },
-            },
-            {
-              _id: "4321",
-              username: "John Snow",
-              avatar: "assets/imgs/snow.png",
-              status: {
-                state: "offline",
-                lastChanged: "14 July, 20:00",
-              },
-            },
-          ],
-          typingUsers: [4321],
-        },
-      ],
-      messages: [
-        {
-          _id: "7890",
-          indexId: 12092,
-          content: "Message 1",
-          senderId: "1234",
-          username: "John Doe",
-          avatar: "assets/imgs/doe.png",
-          date: "13 November",
-          timestamp: "10:20",
-          system: false,
-          saved: true,
-          distributed: true,
-          seen: true,
-          deleted: false,
-          failure: true,
-          disableActions: false,
-          disableReactions: false,
-        },
-      ],
-      roomActions: [
-        { name: "inviteUser", title: "Invite User" },
-        { name: "removeUser", title: "Remove User" },
-        { name: "deleteRoom", title: "Delete Room" },
-      ],
+      answer1: false,
+      answer2: false,
+      answer3: false,
+      loading1: false,
+      loading2: false,
+      loading3: false,
     };
   },
   name: "LogContent",
+  methods: {
+    getAnswer(index) {
+      if (index === 1) {
+        this.loading1 = true;
+        this.answer1 = true;
+      } else if (index === 2) {
+        this.loading2 = true;
+        this.answer2 = true;
+      } else {
+        this.loading3 = true;
+        this.answer3 = true;
+      }
+      setTimeout(() => {
+        this.loading1 = false;
+        this.loading2 = false;
+        this.loading3 = false;
+      }, 1500);
+    },
+  },
 };
 </script>
 
