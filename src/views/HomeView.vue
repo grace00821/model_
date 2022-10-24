@@ -1,21 +1,24 @@
 <template>
-  <UserInfo />
-  <TodayFocus />
+  <LogoComp />
+  <LogSystem />
+  <!--  <UserInfo />-->
 </template>
 
 <script>
 import { defineComponent } from "vue";
 
 // Components
-import UserInfo from "../components/UserInfo.vue";
-import TodayFocus from "@/components/TodayFocus";
+// import UserInfo from "../components/UserInfo.vue";
+import LogoComp from "@/components/LogoComp";
+import LogSystem from "@/components/LogSystem";
 
 export default defineComponent({
   name: "HomeView",
 
   components: {
-    UserInfo,
-    TodayFocus,
+    LogSystem,
+    LogoComp,
+    // UserInfo,
   },
 });
 </script>
