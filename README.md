@@ -1,6 +1,6 @@
-# DEFT: Digital Ecosystem For Telehealth 
-*I think it's a great name but boss doen't really like it, I will call it this way just for now.
-### An integrated software to 1) empower the telemedicine consultation and 2) provide a long-term health monitoring.
+# Unnamed App
+
+### An integrated software to 1) empower the telemedicine consultation, 2) provide a long-term health monitoring and 3) log health data as a snapshot.
 
 ## Project management
 ### \> Framework: Vue.js
