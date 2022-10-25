@@ -3,7 +3,7 @@
   <LogSystem />
   <!--  <UserInfo />-->
   <v-container>
-    <h3>Shortcut</h3>
+    <h2>Shortcut</h2>
     <v-row dense>
       <v-col cols="12">
         <v-card elevation="3">
@@ -31,7 +31,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <h3 style="margin-top: 15px">Suggestion</h3>
+    <h2 style="margin-top: 15px">Suggestion</h2>
     <v-row dense>
       <v-col cols="12">
         <v-card elevation="3">
