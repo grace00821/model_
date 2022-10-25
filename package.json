@@ -10,10 +10,12 @@
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
     "@mdi/font": "5.9.55",
+    "@naturefw/storage": "^0.2.6",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "bootstrap-vue-3": "^0.3.12",
     "core-js": "^3.8.3",
+    "idb": "^7.1.0",
     "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
