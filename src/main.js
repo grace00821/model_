@@ -11,12 +11,21 @@ import BootstrapVue3 from "bootstrap-vue-3";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
 
-import dbHelp from "./storage/idb.js";
+// eslint-disable-next-line no-unused-vars
+import { checkStorage, createDatabase } from "./api/indexedDBService";
 
-dbHelp((help) => {
-  // indexedDB 准备好了
-  console.log("main里面获取 indexedDB 的help", help);
-});
+// import dbHelp from "./storage/idb.js";
+//
+// dbHelp((help) => {
+//   // indexedDB 准备好了
+//   console.log("main里面获取 indexedDB 的help", help);
+// });
+
+console.log("Debug");
+
+createDatabase().then((r) => console.log(r));
+const record = checkStorage("LocalDatabase");
+console.log("hohoho", record);
 
 loadFonts();
 
