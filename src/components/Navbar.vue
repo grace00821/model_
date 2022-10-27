@@ -1,17 +1,28 @@
 <template>
-  <v-bottom-navigation :value="value" grow>
-    <v-btn to="/">
-      <v-icon>mdi-home</v-icon>
+  <v-bottom-navigation
+    grow
+    elevation="1"
+    class="rounded-t-xl"
+    style="height: 95px"
+  >
+    <v-btn to="/" class="btnStyle">
+      <v-icon size="24px">mdi-home</v-icon>
+      Home
     </v-btn>
 
-    <v-btn to="/chat">
-      <v-badge color="pink" dot>
-        <v-icon>mdi-message</v-icon>
-      </v-badge>
+    <v-btn to="/chat" class="btnStyle">
+      <v-icon size="24px">mdi-message</v-icon>
+      Chat
     </v-btn>
 
-    <v-btn to="/tool">
-      <v-icon>mdi-toolbox</v-icon>
+    <v-btn to="/tool" class="btnStyle">
+      <v-icon size="24px">mdi-toolbox</v-icon>
+      Tools
+    </v-btn>
+
+    <v-btn to="/setting" class="btnStyle">
+      <v-icon size="24px">mdi-cog</v-icon>
+      Setting
     </v-btn>
   </v-bottom-navigation>
 </template>
@@ -23,4 +34,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.btnStyle {
+  padding-bottom: 20px;
+  font-size: 10px;
+}
+</style>

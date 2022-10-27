@@ -1,0 +1,33 @@
+[
+  {
+    "object": "chatbot",
+    "history": [
+      {
+        "time": "",
+        "content": "",
+        "sender": 1
+      },
+      {
+        "time": "",
+        "content": "",
+        "sender": 0
+      }
+    ]
+  },
+  {
+    "object": "Dr. Wong",
+    "avatar": "",
+    "history": [
+      {
+        "time": "",
+        "content": "",
+        "sender": 1
+      },
+      {
+        "time": "",
+        "content": "",
+        "sender": 0
+      }
+    ]
+  }
+]

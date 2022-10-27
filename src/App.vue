@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="background-color: #f0f0f0" class="application">
     <v-main>
       <router-view />
       <navbar></navbar>
@@ -17,3 +17,11 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans");
+
+.application {
+  font-family: "Plus Jakarta Sans";
+}
+</style>
