@@ -6,23 +6,29 @@
     <h2 style="font-size: 22px; font-weight: bolder">Shortcut</h2>
     <v-row dense>
       <v-col cols="12">
-        <v-card
-          variant="outlined"
-          style="background-color: white; border-color: white"
-        >
-          <v-img
-            src="img/heartsignal.png"
-            width="35px"
-            style="background-color: #20c997"
-          ></v-img>
-          <v-card-title
-            style="font-weight: bolder; background-color: #fd7e14; width: 70%"
-          >
-            Heart sound</v-card-title
-          >
-        </v-card>
+        <ShortcutCard
+          title="Heart sound"
+          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+          destination="/"
+          info="No Previous data."
+        ></ShortcutCard>
+        <PlaceHolder />
+        <ShortcutCard
+          title="Lung sound"
+          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+          destination="/"
+          info="No Previous data."
+        ></ShortcutCard>
+        <PlaceHolder />
+        <ShortcutCard
+          title="Wound care"
+          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+          destination="/"
+          info="No Previous data."
+        ></ShortcutCard>
       </v-col>
     </v-row>
+    <div style="width: 100%; height: 40px"></div>
   </v-container>
 </template>
 
@@ -33,6 +39,8 @@ import { defineComponent } from "vue";
 // import UserInfo from "../components/UserInfo.vue";
 import LogoComp from "@/components/LogoComp";
 import LogSystem from "@/components/LogSystem";
+import ShortcutCard from "@/components/ShortcutCard";
+import PlaceHolder from "@/components/PlaceHolder";
 
 export default defineComponent({
   name: "HomeView",
@@ -40,6 +48,8 @@ export default defineComponent({
   components: {
     LogSystem,
     LogoComp,
+    ShortcutCard,
+    PlaceHolder,
     // UserInfo,
   },
 });

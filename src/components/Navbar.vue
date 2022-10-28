@@ -1,5 +1,10 @@
 <template>
-  <v-bottom-navigation grow class="rounded-t-xl" style="height: 95px">
+  <v-bottom-navigation
+    grow
+    class="rounded-t-xl"
+    style="height: 95px"
+    elevation="0"
+  >
     <v-btn to="/" class="btnStyle">
       <v-icon size="24px">mdi-home-outline</v-icon>
       Home
