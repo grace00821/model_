@@ -3,56 +3,23 @@
   <LogSystem />
   <!--  <UserInfo />-->
   <v-container>
-    <h2>Shortcut</h2>
+    <h2 style="font-size: 22px; font-weight: bolder">Shortcut</h2>
     <v-row dense>
       <v-col cols="12">
-        <v-card elevation="3">
-          <v-card-title class="text-h5"> Use ausculto Now </v-card-title>
-
-          <v-card-subtitle
-            >Listen to your heart sound and lung sound whenever and wherever,
-            online and offline.</v-card-subtitle
+        <v-card
+          variant="outlined"
+          style="background-color: white; border-color: white"
+        >
+          <v-img
+            src="img/heartsignal.png"
+            width="35px"
+            style="background-color: #20c997"
+          ></v-img>
+          <v-card-title
+            style="font-weight: bolder; background-color: #fd7e14; width: 70%"
           >
-
-          <v-card-actions>
-            <v-btn variant="text"> Enter </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12">
-        <v-card elevation="3">
-          <v-card-title class="text-h5"> Another app </v-card-title>
-
-          <v-card-subtitle>Use another function.</v-card-subtitle>
-
-          <v-card-actions>
-            <v-btn variant="text"> Enter </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
-    <h2 style="margin-top: 15px">Suggestion</h2>
-    <v-row dense>
-      <v-col cols="12">
-        <v-card elevation="3">
-          <v-card-title class="text-h5"> Suggestion 1 </v-card-title>
-
-          <v-card-subtitle>Some hint.</v-card-subtitle>
-
-          <v-card-actions>
-            <v-btn variant="text"> Enter </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12">
-        <v-card elevation="3">
-          <v-card-title class="text-h5"> Suggestion 2 </v-card-title>
-
-          <v-card-subtitle>Some hint.</v-card-subtitle>
-
-          <v-card-actions>
-            <v-btn variant="text"> Enter </v-btn>
-          </v-card-actions>
+            Heart sound</v-card-title
+          >
         </v-card>
       </v-col>
     </v-row>

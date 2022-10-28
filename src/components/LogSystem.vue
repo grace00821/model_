@@ -18,6 +18,28 @@
       append-inner-icon="mdi-send"
       @click:append-inner="sendMessage"
     ></v-text-field>
+    <v-row>
+      <v-col
+        ><v-btn
+          block
+          variant="tonal"
+          prepend-icon="mdi-message-outline"
+          style="background-color: #59c5be; font-weight: bolder; color: white"
+        >
+          Ask Mobo
+        </v-btn></v-col
+      >
+      <v-col
+        ><v-btn
+          block
+          variant="tonal"
+          prepend-icon="mdi-clipboard-outline"
+          style="background-color: #daedec; font-weight: bolder"
+        >
+          Record
+        </v-btn></v-col
+      >
+    </v-row>
   </v-container>
 </template>
 
