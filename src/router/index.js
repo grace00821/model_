@@ -34,6 +34,11 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/SettingView"),
   },
+  {
+    path: "/ausculto",
+    name: "ausculto",
+    component: () => import("../views/AuscultoView"),
+  },
 ];
 
 const router = createRouter({

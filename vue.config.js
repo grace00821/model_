@@ -23,4 +23,8 @@ module.exports = defineConfig({
     //   // ...other Workbox options...
     // },
   },
+
+  devServer: {
+    https: true,
+  },
 });

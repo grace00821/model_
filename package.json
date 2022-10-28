@@ -20,6 +20,7 @@
     "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
+    "recorder-js": "^1.0.7",
     "register-service-worker": "^1.7.2",
     "roboto-fontface": "*",
     "vue": "^3.2.41",

@@ -23,6 +23,7 @@
             variant="tonal"
             prepend-icon="mdi-plus-box-outline"
             style="background-color: #59c5be; font-weight: bolder; color: white"
+            to="/ausculto"
           >
             Add data
           </v-btn></v-col
