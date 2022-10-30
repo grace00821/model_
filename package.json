@@ -12,6 +12,7 @@
     "@mdi/font": "5.9.55",
     "@naturefw/storage": "^0.2.6",
     "@popperjs/core": "^2.11.6",
+    "all": "^0.0.0",
     "bootstrap": "^5.2.2",
     "bootstrap-vue-3": "^0.3.12",
     "core-js": "^3.8.3",
