@@ -21,7 +21,7 @@
     </v-btn>
 
     <v-btn to="/setting" class="btnStyle">
-      <v-icon size="24px">mdi-cog</v-icon>
+      <v-icon size="24px">mdi-cog-outline</v-icon>
       Setting
     </v-btn>
   </v-bottom-navigation>

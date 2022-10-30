@@ -6,29 +6,29 @@
     "content": {}
   },
   {
-    "datatype": "Conversation",
+    "datatype": "conversation",
     "id": 4,
     "timestamp":"2022/10/27-14/00/17",
     "content": [
       {
         "sender": 1,
         "content": "Anytime!",
-        "timestamp": ""
+        "timestamp": "2022/10/27-14/00/17"
       },
       {
         "sender": 0,
         "content": "Nothing, just wanna say hi",
-        "timestamp": ""
+        "timestamp": "2022/10/27-14/00/15"
       },
       {
         "sender": 1,
         "content": "Hi Charlie, how can I help today",
-        "timestamp": ""
+        "timestamp": "2022/10/27-14/00/10"
       },
       {
         "sender": 0,
         "content": "Hi",
-        "timestamp": ""
+        "timestamp": "2022/10/27-14/00/07"
       }
     ]
   },

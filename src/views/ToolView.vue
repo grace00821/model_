@@ -1,27 +1,27 @@
 <template>
-  <v-row>
-    <!--    <ShortcutCard-->
-    <!--      title="ausculto"-->
-    <!--      info="Record your heart sound via your phone"-->
-    <!--      destination="/ausculto"-->
-    <!--      img="/"-->
-    <!--    ></ShortcutCard>-->
-    <!--    <ShortcutCard-->
-    <!--      title="WoundCare"-->
-    <!--      info="Record your heart sound via your phone"-->
-    <!--      destination="/woundcare"-->
-    <!--      img="/"-->
-    <!--    ></ShortcutCard>-->
-  </v-row>
+  <v-container>
+    <h4 style="font-weight: bolder; text-align: center">Tools</h4>
+    <PlaceHolder />
+    <p1 style="color: #a4b2b2">FAVOURITES</p1>
+    <PlaceHolder />
+    <ToolCard title="ausculto for heart"></ToolCard>
+    <PlaceHolder />
+    <ToolCard title="ausculto for lung"></ToolCard>
+    <PlaceHolder />
+    <p1 style="color: #a4b2b2">ALL</p1>
+    <PlaceHolder />
+    <ToolCard title="Wound care"></ToolCard>
+  </v-container>
 </template>
 
 <script>
-import ShortcutCard from "@/components/ShortcutCard";
+import ToolCard from "@/components/ToolCard";
+import PlaceHolder from "@/components/PlaceHolder";
 export default {
   name: "ToolView",
   components: {
-    // eslint-disable-next-line vue/no-unused-components
-    ShortcutCard,
+    ToolCard,
+    PlaceHolder,
   },
 };
 </script>

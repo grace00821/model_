@@ -39,6 +39,11 @@ const routes = [
     name: "ausculto",
     component: () => import("../views/AuscultoView"),
   },
+  {
+    path: "/inchat",
+    name: "inchat",
+    component: () => import("../views/InChatView"),
+  },
 ];
 
 const router = createRouter({

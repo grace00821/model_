@@ -3,13 +3,13 @@
   <LogSystem />
   <!--  <UserInfo />-->
   <v-container>
-    <h2 style="font-size: 22px; font-weight: bolder">Shortcut</h2>
+    <h4 style="font-weight: bolder">Shortcut</h4>
     <v-row dense>
       <v-col cols="12">
         <ShortcutCard
           title="Heart sound"
           img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-          destination="/"
+          destination="/ausculto"
           info="No Previous data."
         ></ShortcutCard>
         <PlaceHolder />

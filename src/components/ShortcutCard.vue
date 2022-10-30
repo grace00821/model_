@@ -3,7 +3,9 @@
     variant="outlined"
     style="background-color: white; border-color: white"
   >
-    <v-card-title style="font-weight: bolder"> {{ title }} </v-card-title>
+    <v-card-title>
+      <h4 style="font-weight: bolder">{{ title }}</h4>
+    </v-card-title>
     <v-card-text
       ><v-row
         ><v-col><v-img :src="img"></v-img></v-col
@@ -23,7 +25,7 @@
             variant="tonal"
             prepend-icon="mdi-plus-box-outline"
             style="background-color: #59c5be; font-weight: bolder; color: white"
-            to="/ausculto"
+            :to="destination"
           >
             Add data
           </v-btn></v-col
