@@ -56,6 +56,13 @@ export const bot = function (chat) {
     insertNewChatItem(choiceElem);
   };
 
+  const printQuery = function (q) {
+    const choiceElem = document.createElement("div");
+    choiceElem.classList.add("chat-ask");
+    choiceElem.innerHTML = q;
+    insertNewChatItem(choiceElem);
+  };
+
   const disableAllChoices = function () {
     const choices = document.querySelectorAll(".choice");
     choices.forEach(function (choice) {
@@ -97,7 +104,11 @@ export const bot = function (chat) {
   };
 
   const startConversation = function () {
-    printResponse(chat[1]);
+    // TODO
+    printQuery(
+      JSON.parse(window.localStorage.getItem("upcomingNewRecord")).inputData
+    );
+    printResponse(chat[2]);
   };
 
   const init = function () {
