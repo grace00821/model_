@@ -2,6 +2,7 @@
   <v-card
     variant="outlined"
     style="background-color: white; border-color: white"
+    :to="destination"
   >
     <v-card-title
       ><v-row>
@@ -27,6 +28,7 @@ export default {
     title: String,
     content: String,
     fav: Boolean,
+    destination: String,
   },
 };
 </script>

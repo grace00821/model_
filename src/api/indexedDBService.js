@@ -1,4 +1,4 @@
-import { deleteDB, openDB } from "idb";
+import { openDB } from "idb";
 
 export function createDatabase() {
   return openDB("LocalDatabase", 1, {
@@ -34,9 +34,15 @@ export async function putDatabase(databaseName, objectName, value, key) {
   }
 }
 
-export const deleteStorage = async (storeName) => {
+export const clearStorage = async (databaseName) => {
   try {
-    await deleteDB(storeName);
+    const db = await openDB(databaseName, 1);
+    const result1 = await db.clear("user");
+    const result2 = await db.clear("log");
+    const result3 = await db.clear("conversation");
+    return new Promise((resolve) => {
+      resolve(result1, result2, result3);
+    });
   } catch (error) {
     console.log(error);
   }

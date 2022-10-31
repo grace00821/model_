@@ -2,22 +2,22 @@
   <v-container>
     <h4 style="font-weight: bolder; text-align: center">Tools</h4>
     <PlaceHolder />
-    <p1 style="color: #a4b2b2">FAVOURITES</p1>
-    <PlaceHolder />
+    <p style="color: #a4b2b2">FAVOURITES</p>
     <ToolCard
       title="ausculto for heart"
       v-bind:fav="true"
       content="Collect your heart sound through our phone-based intelligent stethoscope."
+      destination="/ausculto"
     ></ToolCard>
     <PlaceHolder />
     <ToolCard
       title="ausculto for lung"
       v-bind:fav="true"
       content="Collect your lung sound through our phone-based intelligent stethoscope."
+      destination="/ausculto"
     ></ToolCard>
     <PlaceHolder />
-    <p1 style="color: #a4b2b2">ALL</p1>
-    <PlaceHolder />
+    <p style="color: #a4b2b2">ALL</p>
     <ToolCard
       title="Wound care"
       v-bind:fav="false"
