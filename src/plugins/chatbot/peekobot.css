@@ -1,58 +1,58 @@
 #peekobot-container {
-    border: 1px solid hsl(0, 0%, 90%);
-    border-radius: 12px;
-    box-shadow: 2px 2px 5px hsl(0, 0%, 60%);
-    padding: 1rem 1rem 2rem 1rem;
-    height: var(--peekobot-height);
-    position: relative;
+  /*border: 1px solid hsl(0, 0%, 90%);*/
+  /*border-radius: 12px;*/
+  /*box-shadow: 2px 2px 5px hsl(0, 0%, 60%);*/
+  /*padding: 1rem 1rem 2rem 1rem;*/
+  /*height: var(--peekobot-height);*/
+  /*position: relative;*/
 }
 #peekobot-inner {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    position: relative;
-    /* Hiding scrollbars is a pain. This is from: https://redstapler.co/css-hidden-scrollbar-while-scrollable-element/ */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+  /* Hiding scrollbars is a pain. This is from: https://redstapler.co/css-hidden-scrollbar-while-scrollable-element/ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-#peekobot-inner::-webkit-scrollbar { 
-    display: none;  /* Chrome Safari */
+#peekobot-inner::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
 }
 
 .chat-response,
 .chat-ask {
-    opacity: 0;  /* Set to activated to show */
-    transform: translateY(-50%); /* Set to activated to move down */
-    transition: all 0.3s 0.3s;
-    border-radius: 12px;
-    background-color: hsl(0, 0%, 90%);
-    padding: 0.5rem 0.7rem;
-    line-height: 1.4;
-    color: black;
-    width: 80%;
-    margin-bottom: 0.5rem;
+  opacity: 0; /* Set to activated to show */
+  transform: translateY(-50%); /* Set to activated to move down */
+  transition: all 0.3s 0.3s;
+  border-radius: 12px;
+  background-color: white;
+  padding: 0.5rem 0.7rem;
+  line-height: 1.4;
+  color: black;
+  width: 80%;
+  margin-bottom: 0.5rem;
 }
 .chat-response {
-    margin-left: 26px;
-    position: relative;
+  margin-left: 26px;
+  position: relative;
 }
 .chat-response:before {
-    display: block;
-    content: '';
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: -26px;
-    top: 6px;
-    background-image: var(--peekobot-avatar);
-    background-color: #FFF;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border-radius: 100%;
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  background-image: url("../../../public/DummyData/aiAvatar.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 100%;
 }
 .chat-ask {
-  background-color: hsl(207, 96%, 55%);
+  background-color: #59c5be;
   margin-right: 0;
   margin-left: auto;
   color: hsl(0, 0%, 100%);
@@ -90,8 +90,8 @@
 }
 .restart {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  bottom: 30px;
+  right: 30px;
   outline: none;
   font-size: 12px;
   color: hsl(0, 0%, 50%);

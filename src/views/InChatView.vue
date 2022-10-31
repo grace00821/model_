@@ -1,27 +1,13 @@
 <template>
   <TopTitle :title="this.title" :return-arrow="true" />
   <v-container>
-    <!--    <div-->
-    <!--      style="-->
-    <!--        position: fixed;-->
-    <!--        width: 100%;-->
-    <!--        background-color: #f0f0f0;-->
-    <!--        z-index: 999;-->
-    <!--      "-->
-    <!--    >-->
-    <!--      <h4 style="font-weight: bolder; text-align: center">-->
-    <!--        <v-icon class="float-left" @click="navigateBack">mdi-arrow-left</v-icon>-->
-    <!--        {{ this.title }}-->
-    <!--      </h4>-->
-    <!--      <PlaceHolder />-->
-    <!--    </div>-->
-    <!--    <v-btn @click="test">TEST</v-btn>-->
-
     <div id="peekobot-container">
       <div id="peekobot-inner">
         <div id="peekobot"></div>
       </div>
     </div>
+    <PlaceHolder />
+    <PlaceHolder />
     <PlaceHolder />
   </v-container>
 </template>
@@ -64,6 +50,5 @@ export default {
 </script>
 
 <style scoped>
-/*@import "../plugins/chatbot/main.css";*/
 @import "../plugins/chatbot/peekobot.css";
 </style>

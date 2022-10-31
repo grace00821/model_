@@ -48,6 +48,7 @@ export const bot = function (chat) {
     }
   };
 
+  // If chest pain, call this function and print message
   const printChoice = function (choice) {
     const choiceElem = document.createElement("div");
     choiceElem.classList.add("chat-ask");

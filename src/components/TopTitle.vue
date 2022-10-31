@@ -1,6 +1,9 @@
 <template>
   <v-app-bar :elevation="0" style="background-color: #f0f0f0">
-    <v-app-bar-nav-icon v-if="returnArrow" @click="navigateBack"
+    <v-app-bar-nav-icon
+      v-if="returnArrow"
+      @click="navigateBack"
+      style="position: fixed"
       ><v-icon>mdi-arrow-left</v-icon></v-app-bar-nav-icon
     >
     <v-app-bar-title
