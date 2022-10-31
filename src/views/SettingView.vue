@@ -1,7 +1,6 @@
 <template>
+  <TopTitle title="Setting" :return-arrow="false"></TopTitle>
   <v-container>
-    <h4 style="font-weight: bolder; text-align: center">Setting</h4>
-    <PlaceHolder />
     <p style="color: #a4b2b2">
       *This page are only for the demonstration purpose.
     </p>
@@ -23,6 +22,7 @@ import {
   createDatabase,
   putDatabase,
 } from "../api/indexedDBService";
+import TopTitle from "@/components/TopTitle";
 export default {
   name: "SettingVue",
   methods: {
@@ -66,6 +66,7 @@ export default {
   },
   components: {
     PlaceHolder,
+    TopTitle,
   },
 };
 </script>

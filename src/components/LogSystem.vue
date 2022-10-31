@@ -74,6 +74,8 @@ export default {
         "upcomingNewRecord",
         JSON.stringify(upcomingNewRecord)
       );
+      window.localStorage.setItem("enterInchatfrom", "main");
+      window.localStorage.setItem("inchatWith", "Health Log");
       this.$router.push("/inchat");
     },
     enterSystem() {

@@ -1,5 +1,10 @@
 <template>
   <v-container>
+    <h4 style="font-weight: bolder; text-align: center">
+      <v-icon class="float-left" @click="navigateBack">mdi-arrow-left</v-icon>
+      ausculto
+    </h4>
+    <PlaceHolder />
     <v-btn block @click="startRecord">Record</v-btn>
     <PlaceHolder />
     <v-btn block @click="stopRecord">Stop</v-btn>
@@ -29,6 +34,9 @@ export default {
     return {};
   },
   methods: {
+    navigateBack() {
+      history.back();
+    },
     async initMic() {
       audioContext = new (window.AudioContext || window.webkitAudioContext)();
 

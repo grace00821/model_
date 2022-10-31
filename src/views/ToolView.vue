@@ -1,7 +1,6 @@
 <template>
+  <TopTitle title="Tools" :return-arrow="false"></TopTitle>
   <v-container>
-    <h4 style="font-weight: bolder; text-align: center">Tools</h4>
-    <PlaceHolder />
     <p style="color: #a4b2b2">FAVOURITES</p>
     <ToolCard
       title="ausculto for heart"
@@ -41,12 +40,12 @@
 
 <script>
 import ToolCard from "@/components/ToolCard";
-import PlaceHolder from "@/components/PlaceHolder";
+import TopTitle from "@/components/TopTitle";
 export default {
   name: "ToolView",
   components: {
     ToolCard,
-    PlaceHolder,
+    TopTitle,
   },
 };
 </script>

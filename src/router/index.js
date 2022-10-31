@@ -38,11 +38,17 @@ const routes = [
     path: "/ausculto",
     name: "ausculto",
     component: () => import("../views/AuscultoView"),
+    meta: {
+      hideNavbar: true,
+    },
   },
   {
     path: "/inchat",
     name: "inchat",
     component: () => import("../views/InChatView"),
+    meta: {
+      hideNavbar: true,
+    },
   },
   {
     path: "/wound",

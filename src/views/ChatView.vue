@@ -1,9 +1,8 @@
 <template>
+  <TopTitle title="Chat" :return-arrow="false"></TopTitle>
   <v-container>
-    <h4 style="font-weight: bolder; text-align: center">Chat</h4>
-    <PlaceHolder />
     <div v-for="item in this.chatList" :key="item.object">
-      <v-row @click="clickToBeInChat()"
+      <v-row @click="clickToBeInChat(item.object)"
         ><v-col
           cols="2"
           style="display: flex; justify-content: center; align-items: center"
@@ -40,12 +39,12 @@
 <script>
 // eslint-disable-next-line no-unused-vars
 import { getDatabase, getAllKeys } from "@/api/indexedDBService";
-import PlaceHolder from "@/components/PlaceHolder";
+import TopTitle from "@/components/TopTitle";
 
 export default {
   name: "ChatView",
   components: {
-    PlaceHolder,
+    TopTitle,
   },
   data() {
     return {
@@ -69,8 +68,10 @@ export default {
       const time = splitted[1].split("/");
       return time[0] + ":" + time[1] + ":" + time[2];
     },
-    clickToBeInChat() {
-      console.log("Click to enter a chat: ");
+    clickToBeInChat(param) {
+      window.localStorage.setItem("enterInchatfrom", "chat");
+      window.localStorage.setItem("inchatWith", param);
+      this.$router.push("/inchat");
     },
   },
   created() {

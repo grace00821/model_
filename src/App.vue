@@ -2,7 +2,7 @@
   <v-app style="background-color: #f0f0f0" class="application">
     <v-main>
       <router-view />
-      <navbar></navbar>
+      <navbar v-if="!$route.meta.hideNavbar"></navbar>
     </v-main>
   </v-app>
 </template>
