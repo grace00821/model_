@@ -1,28 +1,23 @@
 <template>
   <v-container>
-    <v-toolbar color="teal">
-      <v-toolbar-title>Settings</v-toolbar-title>
-    </v-toolbar>
-
-    <v-list>
-      <v-list-item>
-        <v-btn block color="teal" variant="outlined" @click="clearLocalDB">
-          Clear Local Database
-        </v-btn>
-      </v-list-item>
-
-      <v-list-item>
-        <v-btn block color="teal" variant="outlined" @click="reloadDummyData">
-          Reload Dummy Data
-        </v-btn>
-      </v-list-item>
-    </v-list>
-
-    <!--      <v-divider></v-divider>-->
+    <h4 style="font-weight: bolder; text-align: center">Setting</h4>
+    <PlaceHolder />
+    <p1 style="color: #a4b2b2"
+      >*This two buttons are only for demonstration purpose.</p1
+    >
+    <PlaceHolder />
+    <v-btn block color="teal" variant="outlined" @click="clearLocalDB"
+      >clear local database</v-btn
+    >
+    <PlaceHolder />
+    <v-btn block color="teal" variant="outlined" @click="reloadDummyData">
+      Reload Dummy Data
+    </v-btn>
   </v-container>
 </template>
 
 <script>
+import PlaceHolder from "@/components/PlaceHolder";
 export default {
   name: "SettingVue",
   methods: {
@@ -32,6 +27,9 @@ export default {
     reloadDummyData() {
       console.log("Reload Dummy Data");
     },
+  },
+  components: {
+    PlaceHolder,
   },
 };
 </script>
