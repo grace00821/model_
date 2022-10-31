@@ -6,6 +6,7 @@ export function createDatabase() {
       db.createObjectStore("user");
       db.createObjectStore("conversation");
       db.createObjectStore("log");
+      db.createObjectStore("shortcut");
     },
   });
 }
@@ -40,8 +41,9 @@ export const clearStorage = async (databaseName) => {
     const result1 = await db.clear("user");
     const result2 = await db.clear("log");
     const result3 = await db.clear("conversation");
+    const result4 = await db.clear("shortcut");
     return new Promise((resolve) => {
-      resolve(result1, result2, result3);
+      resolve(result1, result2, result3, result4);
     });
   } catch (error) {
     console.log(error);

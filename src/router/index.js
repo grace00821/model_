@@ -44,6 +44,11 @@ const routes = [
     name: "inchat",
     component: () => import("../views/InChatView"),
   },
+  {
+    path: "/wound",
+    name: "wound",
+    component: () => import("../views/WoundView"),
+  },
 ];
 
 const router = createRouter({

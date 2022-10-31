@@ -36,34 +36,27 @@ export default {
       fetch("DummyData/DummyUser.json")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
-          putDatabase("LocalDatabase", "user", json, json.name).then((res) => {
-            console.log(res);
-          });
+          putDatabase("LocalDatabase", "user", json, json.name);
         });
       fetch("DummyData/DummyLog.json")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
           json.forEach((item) => {
-            putDatabase("LocalDatabase", "log", item, item.id).then((res) => {
-              console.log(res);
-            });
+            putDatabase("LocalDatabase", "log", item, item.id);
           });
         });
       fetch("DummyData/DummyConversation.json")
         .then((response) => response.json())
         .then((json) => {
-          console.log(json);
           json.forEach((item) => {
-            putDatabase(
-              "LocalDatabase",
-              "conversation",
-              item,
-              item.object
-            ).then((res) => {
-              console.log(res);
-            });
+            putDatabase("LocalDatabase", "conversation", item, item.object);
+          });
+        });
+      fetch("DummyData/DummyShortcut.json")
+        .then((response) => response.json())
+        .then((json) => {
+          json.forEach((item) => {
+            putDatabase("LocalDatabase", "shortcut", item, item.title);
           });
         });
     },

@@ -6,26 +6,17 @@
     <h4 style="font-weight: bolder">Shortcut</h4>
     <v-row dense>
       <v-col cols="12">
-        <ShortcutCard
-          title="Heart sound"
-          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-          destination="/ausculto"
-          info="No Previous data."
-        ></ShortcutCard>
-        <PlaceHolder />
-        <ShortcutCard
-          title="Lung sound"
-          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-          destination="/"
-          info="No Previous data."
-        ></ShortcutCard>
-        <PlaceHolder />
-        <ShortcutCard
-          title="Wound care"
-          img="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-          destination="/"
-          info="No Previous data."
-        ></ShortcutCard>
+        <div v-for="item in this.shortcards" :key="item.title">
+          <ShortcutCard
+            :title="item.title"
+            :img="item.img"
+            :audio="item.audio"
+            :destination="item.destination"
+            :info="item.info"
+            :sharedisable="item.sharedisable"
+          ></ShortcutCard>
+          <PlaceHolder />
+        </div>
       </v-col>
     </v-row>
     <div style="width: 100%; height: 40px"></div>
@@ -34,6 +25,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import { getDatabase } from "../api/indexedDBService";
 
 // Components
 // import UserInfo from "../components/UserInfo.vue";
@@ -43,8 +35,25 @@ import ShortcutCard from "@/components/ShortcutCard";
 import PlaceHolder from "@/components/PlaceHolder";
 
 export default defineComponent({
+  data() {
+    return {
+      shortcards: [
+        {
+          title: "Heart Sound",
+          destination: "/ausculto",
+        },
+        {
+          title: "Lung Sound",
+          destination: "/ausculto",
+        },
+        {
+          title: "Wound care",
+          destination: "/wound",
+        },
+      ],
+    };
+  },
   name: "HomeView",
-
   components: {
     LogSystem,
     LogoComp,
@@ -52,5 +61,20 @@ export default defineComponent({
     PlaceHolder,
     // UserInfo,
   },
+  created() {
+    // Fetch the latest record from indexedDB
+    console.log("created");
+    this.shortcards.forEach((item) => {
+      console.log(item.title);
+      getDatabase("LocalDatabase", "shortcut", item.title).then((res) => {
+        item.img = res.img;
+        item.audio = res.audio;
+        item.info = res.info;
+        item.sharedisable = res.sharedisable;
+      });
+    });
+    console.log(this.shortcards);
+  },
+  methods: {},
 });
 </script>

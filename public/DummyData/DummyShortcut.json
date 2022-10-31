@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Heart Sound",
+    "img": "DummyData/data/heartsound/1.jpeg",
+    "audio": "DummyData/data/heartsound/1.mp4",
+    "destination": "/ausculto",
+    "info": "2022/10/29-08/40/28",
+    "sharedisable": false
+  },
+  {
+    "title": "Lung Sound",
+    "img": null,
+    "audio": null,
+    "destination": "/ausculto",
+    "info": "No previous data.",
+    "sharedisable": true
+  },
+  {
+    "title": "Wound care",
+    "img": "DummyData/data/wound/1.jpg",
+    "audio": null,
+    "destination": "/wound",
+    "info": "2022/10/20-13/07/08",
+    "sharedisable": false
+  }
+]

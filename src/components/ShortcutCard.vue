@@ -7,8 +7,16 @@
       <h4 style="font-weight: bolder">{{ title }}</h4>
     </v-card-title>
     <v-card-text
-      ><v-row
+      ><v-row v-if="img"
         ><v-col><v-img :src="img"></v-img></v-col
+      ></v-row>
+      <v-row v-if="audio"
+        ><v-col
+          ><audio
+            style="width: 100%; margin-top: 10px"
+            controls
+            :src="audio"
+          ></audio></v-col
       ></v-row>
       <v-row>
         <v-col style="color: #a4b2b2"
@@ -36,6 +44,7 @@
             variant="tonal"
             prepend-icon="mdi-share"
             style="background-color: #daedec; font-weight: bolder"
+            :disabled="sharedisable"
           >
             Share
           </v-btn></v-col
@@ -48,7 +57,7 @@
 <script>
 export default {
   name: "ShortcutCard",
-  props: ["title", "info", "destination", "img"],
+  props: ["title", "info", "destination", "img", "audio", "sharedisable"],
 };
 </script>
 

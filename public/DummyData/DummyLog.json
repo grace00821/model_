@@ -3,7 +3,10 @@
     "datatype": "heartsound",
     "id": 5,
     "timestamp":"2022/10/29-08/40/28",
-    "content": {}
+    "content": {
+      "img": "DummyData/data/heartsound/1.jpeg",
+      "audio": "DummyData/data/heartsound/1.mp4"
+    }
   },
   {
     "datatype": "conversation",
@@ -36,7 +39,9 @@
     "datatype": "wound",
     "id": 3,
     "timestamp":"2022/10/25-12/14/20",
-    "content": {}
+    "content": {
+      "img": "DummyData/data/wound/1.jpeg"
+    }
   },
   {
     "datatype": "textlog",
@@ -47,7 +52,9 @@
   {
     "datatype": "imglog",
     "id":1,
-    "timestamp":"2022/10/20-16/07/08",
-    "content": {}
+    "timestamp":"2022/10/20-13/07/08",
+    "content": {
+      "img": "DummyData/data/wound/1.jpeg"
+    }
   }
 ]
