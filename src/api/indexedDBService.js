@@ -49,3 +49,15 @@ export const clearStorage = async (databaseName) => {
     console.log(error);
   }
 };
+
+export const getAllKeys = async (databaseName, objectName) => {
+  try {
+    const db = await openDB(databaseName, 1);
+    const result = await db.getAllKeys(objectName);
+    return new Promise((resolve) => {
+      resolve(result);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};

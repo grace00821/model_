@@ -30,35 +30,38 @@ export default {
       console.log("Clear Local indexedDB");
       clearStorage("LocalDatabase");
     },
-    reloadDummyData() {
+    async reloadDummyData() {
       console.log("Start to reload Dummy Data");
-      createDatabase().then((r) => console.log(r));
-      fetch("DummyData/DummyUser.json")
+      await createDatabase().then((r) => console.log(r));
+      await fetch("DummyData/DummyUser.json")
         .then((response) => response.json())
         .then((json) => {
           putDatabase("LocalDatabase", "user", json, json.name);
         });
-      fetch("DummyData/DummyLog.json")
+      await fetch("DummyData/DummyLog.json")
         .then((response) => response.json())
         .then((json) => {
           json.forEach((item) => {
             putDatabase("LocalDatabase", "log", item, item.id);
           });
         });
-      fetch("DummyData/DummyConversation.json")
+      await fetch("DummyData/DummyConversation.json")
         .then((response) => response.json())
         .then((json) => {
           json.forEach((item) => {
             putDatabase("LocalDatabase", "conversation", item, item.object);
           });
         });
-      fetch("DummyData/DummyShortcut.json")
+      await fetch("DummyData/DummyShortcut.json")
         .then((response) => response.json())
         .then((json) => {
           json.forEach((item) => {
             putDatabase("LocalDatabase", "shortcut", item, item.title);
           });
         });
+      return new Promise((resolve) => {
+        resolve("all dummy data are reloaded.");
+      });
     },
   },
   components: {

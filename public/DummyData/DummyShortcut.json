@@ -1,6 +1,6 @@
 [
   {
-    "title": "Heart Sound",
+    "title": "Heart sound",
     "img": "DummyData/data/heartsound/1.jpeg",
     "audio": "DummyData/data/heartsound/1.mp4",
     "destination": "/ausculto",
@@ -8,7 +8,7 @@
     "sharedisable": false
   },
   {
-    "title": "Lung Sound",
+    "title": "Lung sound",
     "img": null,
     "audio": null,
     "destination": "/ausculto",

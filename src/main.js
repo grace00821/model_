@@ -13,12 +13,12 @@ import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
 import settingView from "./views/SettingView";
 
 console.log("Load fake data");
-settingView.methods.reloadDummyData();
+settingView.methods.reloadDummyData().then(() => {
+  loadFonts();
 
-loadFonts();
-
-const app = createApp(App);
-app.use(router);
-app.use(vuetify);
-app.use(BootstrapVue3);
-app.mount("#app");
+  const app = createApp(App);
+  app.use(router);
+  app.use(vuetify);
+  app.use(BootstrapVue3);
+  app.mount("#app");
+});

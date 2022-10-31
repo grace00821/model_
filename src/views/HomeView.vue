@@ -39,11 +39,11 @@ export default defineComponent({
     return {
       shortcards: [
         {
-          title: "Heart Sound",
+          title: "Heart sound",
           destination: "/ausculto",
         },
         {
-          title: "Lung Sound",
+          title: "Lung sound",
           destination: "/ausculto",
         },
         {
