@@ -14,11 +14,15 @@
     "@popperjs/core": "^2.11.6",
     "@tensorflow/tfjs": "^4.0.0",
     "all": "^0.0.0",
+    "audio-buffer-from": "^1.1.1",
+    "audiobuffer-to-wav": "^1.0.0",
     "bootstrap": "^5.2.2",
     "bootstrap-vue-3": "^0.3.12",
     "core-js": "^3.8.3",
+    "discrete-wavelets": "^5.0.13",
     "ibd": "^0.0.0-alpha.0",
     "idb": "^7.1.0",
+    "mathjs": "^11.3.2",
     "mutationobserver-shim": "^0.3.7",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
@@ -29,6 +33,7 @@
     "vue-advanced-chat": "^2.0.3",
     "vue-router": "^4.0.3",
     "vuetify": "^3.0.0-beta.0",
+    "wave-resampler": "^1.0.0",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
